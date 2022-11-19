@@ -2,8 +2,8 @@ import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity("users")
 class User {
-  @PrimaryGeneratedColumn("uuid")
-  id: string;
+  @PrimaryGeneratedColumn("increment")
+  id: number;
 
   @Column({ length: 40 })
   name: string;
@@ -15,40 +15,40 @@ class User {
   email: string;
 
   @Column()
-  Telephone: string;
+  telephone: string;
 
   @Column({ unique: true })
-  Celphone: string;
+  celphone: string;
 
   @Column()
-  Birth_date: string;
+  birth_date: string;
 
   @Column()
-  CEP: string;
+  cep: string;
 
   @Column()
-  State: string;
+  state: string;
 
   @Column()
-  City: string;
+  city: string;
 
   @Column()
-  Street: string;
+  street: string;
 
   @Column()
-  District: string;
+  district: string;
 
   @Column({ unique: true })
-  Cpf_cnpj: string;
+  cpf_cnpj: string;
 
   @Column({ length: 300 })
-  Meet_firgun: string;
+  meet_firgun: string;
 
   @Column({ length: 300 })
-  Motive: string;
+  motive: string;
 
   @Column({ default: false })
-  isAdm: boolean;
+  is_adm: boolean;
 }
 
 export { User };
