@@ -26,6 +26,25 @@ const createUserService = async ({
     throw new AppError("CPF or CNPJ already exists", 400);
   }
 
+  if (
+    !name ||
+    !surname ||
+    !email ||
+    !telephone ||
+    !celphone ||
+    !birth_date ||
+    !cep ||
+    !state ||
+    !city ||
+    !street ||
+    !district ||
+    !cpf_cnpj ||
+    !meet_firgun ||
+    !motive
+  ) {
+    throw new AppError("Missing required information", 400);
+  }
+
   const user = userRepository.create({
     name,
     surname,
