@@ -13,4 +13,5 @@ export interface IUserRequest {
   cpf_cnpj: string;
   meet_firgun: string;
   motive: string;
+  is_adm?: boolean;
 }

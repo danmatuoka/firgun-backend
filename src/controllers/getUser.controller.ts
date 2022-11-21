@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { isJSDocAugmentsTag } from "typescript";
 import getUsersService from "../services/getUser.service";
 
 const getUsersController = async (req: Request, res: Response) => {
