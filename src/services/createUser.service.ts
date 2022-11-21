@@ -23,7 +23,7 @@ const createUserService = async ({
   const cpfAlreadyExists = await userRepository.findOneBy({ cpf_cnpj });
 
   if (cpfAlreadyExists) {
-    throw new AppError("CPF ou CNPJ already exists", 400);
+    throw new AppError("CPF or CNPJ already exists", 400);
   }
 
   const user = userRepository.create({
