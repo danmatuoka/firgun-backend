@@ -23,12 +23,13 @@ const updateUserService = async ({
   cpf_cnpj,
   meet_firgun,
   motive,
+  is_adm,
 }: IUserUpdateProps) => {
   const userRepository = AppDataSource.getRepository(User);
   const user = await userRepository.findOneBy({ id });
 
-  if (user!.is_adm === false) {
-    throw new AppError("Forbidden", 403);
+  if (is_adm === false) {
+    throw new AppError("Forbidden, only adm can update infos", 403);
   }
 
   await userRepository.update(id, {
