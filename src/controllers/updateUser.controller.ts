@@ -3,6 +3,7 @@ import updateUserService from "../services/updateUser.service";
 
 const updateUserController = async (req: Request, res: Response) => {
   const { id } = req.params;
+  const { is_adm } = req.user;
 
   const {
     name,
@@ -37,6 +38,7 @@ const updateUserController = async (req: Request, res: Response) => {
     cpf_cnpj,
     meet_firgun,
     motive,
+    is_adm,
   });
 
   return res.status(200).json(userDataUpdated);
