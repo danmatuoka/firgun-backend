@@ -11,13 +11,13 @@ class User {
   @Column({ length: 40 })
   surname: string;
 
-  @Column({ length: 40, unique: true })
+  @Column({ length: 40 })
   email: string;
 
   @Column()
   telephone: string;
 
-  @Column({ unique: true })
+  @Column()
   celphone: string;
 
   @Column()
@@ -29,13 +29,13 @@ class User {
   @Column()
   state: string;
 
-  @Column()
+  @Column({ length: 40 })
   city: string;
 
-  @Column()
+  @Column({ length: 40 })
   street: string;
 
-  @Column()
+  @Column({ length: 40 })
   district: string;
 
   @Column({ unique: true })
